@@ -8,3 +8,19 @@ plugins {
 task clean(type: Delete) {
   delete rootProject.buildDir
 }
+
+
+
+allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    maven {
+      url = uri("https://maven.pkg.github.com/arcblock/StylizeQRCode")
+      credentials {
+        username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+        password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+      }
+    }
+  }
+}
