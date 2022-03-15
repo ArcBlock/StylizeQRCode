@@ -2,6 +2,12 @@
 generate stylized QR code based on ZXing
 
 ## Usage
+### Add into project
+
+```groovy
+  implementation 'io.arcblock.forge:stylize_qr:$version'
+  implementation 'com.google.zxing:core:3.3.3'
+```
 
 ### Basic Dot Style QRCode
 
